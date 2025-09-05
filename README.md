@@ -1,69 +1,73 @@
-# React + TypeScript + Vite
+# Frontend Dashboard App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React + TypeScript dashboard with **Preloader, FormBuilder with validation, FloatingWindow, Toolbar with Reset**, and **localStorage persistence**.  
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Demo
 
-## Expanding the ESLint configuration
+> Live demo: *(add your Vercel/Netlify link here once deployed)*  
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Features
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- **Preloader**: 2-second splash screen before dashboard loads  
+- **FormBuilder**: Name and Email inputs with live validation  
+- **FloatingWindow**: Shows submitted form data in real-time  
+- **Toolbar**: Reset button clears form, errors, and localStorage  
+- **Persistence**: Form data saved in localStorage automatically  
+- **Responsive layout**: Works on different screen sizes  
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Tech Stack
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **Framework**: React 18 + Vite + TypeScript  
+- **Styling**: CSS Modules  
+- **Routing**: React Router v6  
+- **State Management**: React Context API + localStorage  
+- **Animations**: CSS keyframes for Preloader spinner  
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+## File Structure
+src/
+├─ components/
+│ ├─ FormBuilder/
+│ │ ├─ FormBuilder.tsx
+│ │ └─ FormBuilder.module.css
+│ ├─ FloatingWindow/
+│ │ ├─ FloatingWindow.tsx
+│ │ └─ FloatingWindow.module.css
+│ ├─ Preloader/
+│ │ ├─ Preloader.tsx
+│ │ └─ Preloader.module.css
+│ ├─ Toolbar/
+│ │ ├─ Toolbar.tsx
+│ │ └─ Toolbar.module.css
+├─ context/
+│ └─ FormContext.tsx
+├─ App.tsx
+└─ main.tsx
+
+
+Getting Started
+1. Clone the repository
+git clone https://github.com/anjalimadd/frontend-dashboard-app
+
+2. Install dependencies
+npm install
+
+or
+yarn
+
+3. Start the development server
+npm start
+
+or
+yarn start
+
+Open http://localhost:3000 in your browser.
+
+
+
