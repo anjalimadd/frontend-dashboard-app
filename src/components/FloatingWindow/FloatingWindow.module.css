@@ -1,0 +1,21 @@
+
+.window {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  width: 250px;
+  background: white;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.closeBtn {
+  position: absolute;
+  top: 0.2rem;
+  right: 0.2rem;
+  background: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
